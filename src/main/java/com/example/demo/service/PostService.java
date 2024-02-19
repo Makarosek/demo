@@ -11,10 +11,13 @@ import java.util.List;
 
 @Service
 public class PostService {
+    public List<Post> posts;
 
     public List<Post> listAllPosts(){
-        return Arrays.asList(new Post("Hello,", new Date() ),
-                new Post("World", new Date()),
-                new Post(",!", new Date()));
+        return posts;
+    }
+
+    public void create(String text){
+        posts.add(new Post(text, new Date()));
     }
 }
