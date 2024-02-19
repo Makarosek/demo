@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 public class Post {
     private String text;
-    private Integer likes;
+    private Integer likes = 0;
 
     public Post(String text){
         this.text = text;
