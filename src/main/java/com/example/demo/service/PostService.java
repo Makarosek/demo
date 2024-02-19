@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.swing.text.DateFormatter;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +13,10 @@ import java.util.List;
 @Service
 public class PostService {
     public List<Post> posts;
+
+    {
+        posts = new ArrayList<>();
+    }
 
     public List<Post> listAllPosts(){
         return posts;
