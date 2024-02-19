@@ -16,6 +16,8 @@ public class PostService {
 
     {
         posts = new ArrayList<>();
+        Post first = new Post(1l, "Первый пост", new Date());
+        posts.add(first);
     }
 
     public List<Post> listAllPosts(){
@@ -23,6 +25,6 @@ public class PostService {
     }
 
     public void create(String text){
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post((long)posts.size() + 1, text, new Date()));
     }
 }
